@@ -1,99 +1,143 @@
+/* Сброс */
 * {
-border-radius: 28px;
-padding: 40px 30px 35px;
-width: 100%;
-max-width: 420px;
-text-align: center;
-box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-animation: fadeUp 1.2s ease;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* Анимированный фиолетовый фон */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        270deg,
+        #3c096c,
+        #5a189a,
+        #7b2cbf,
+        #9d4edd,
+        #5a189a
+    );
+    background-size: 600% 600%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Карточка */
+.card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    animation: fadeUp 1s ease;
+}
 
 @keyframes fadeUp {
-from { opacity: 0; transform: translateY(30px); }
-to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-
+/* Аватар */
 .avatar {
-width: 120px;
-height: 120px;
-border-radius: 50%;
-object-fit: cover;
-border: 4px solid #c77dff;
-box-shadow: 0 0 25px rgba(199,125,255,0.7);
-margin-bottom: 20px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #c77dff;
+    box-shadow: 0 0 30px rgba(199, 125, 255, 0.9);
+    margin: 0 auto 20px;
+    display: block;
 }
 
-
+/* Заголовок */
 h1 {
-margin-bottom: 25px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: lowercase;
 }
 
-
+/* Кнопки */
 .links {
-display: flex;
-flex-direction: column;
-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
-
 
 .link-btn {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 12px;
-padding: 14px;
-border-radius: 16px;
-background: linear-gradient(135deg, #9d4edd, #5a189a);
-color: #fff;
-text-decoration: none;
-font-size: 16px;
-border: none;
-cursor: pointer;
-transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #9d4edd, #5a189a);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
-
 
 .link-btn:hover {
-transform: translateY(-3px);
-background: linear-gradient(135deg, #c77dff, #7b2cbf);
+    transform: translateY(-4px) scale(1.02);
+    background: linear-gradient(135deg, #c77dff, #7b2cbf);
 }
 
-
+/* Модалка */
 .modal {
-position: fixed;
-inset: 0;
-background: rgba(0,0,0,0.6);
-display: none;
-align-items: center;
-justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .modal-content {
-background: linear-gradient(135deg, #5a189a, #9d4edd);
-padding: 30px;
-border-radius: 22px;
-text-align: center;
+    background: linear-gradient(135deg, #5a189a, #9d4edd);
+    padding: 30px;
+    border-radius: 24px;
+    text-align: center;
+    color: #fff;
+    max-width: 320px;
 }
-
 
 .modal-content a {
-display: inline-block;
-margin-top: 10px;
-padding: 10px 16px;
-background: #fff;
-color: #5a189a;
-border-radius: 12px;
-text-decoration: none;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background: #fff;
+    color: #5a189a;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-
 .close {
-margin-top: 15px;
-background: none;
-border: none;
-color: #fff;
-cursor: pointer;
+    margin-top: 18px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
 }
