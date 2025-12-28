@@ -1,0 +1,61 @@
+!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Добро пожаловать!</title>
+
+
+<!-- Иконки -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+<!-- Шрифт -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+<div class="card">
+<img src="avatar.jpg" alt="avatar" class="avatar" />
+
+
+<h1>добро пожаловать!</h1>
+
+
+<div class="links">
+<a class="link-btn" href="https://steamcommunity.com/id/Ynareti/" target="_blank">
+<i class="fa-brands fa-steam"></i> Steam
+</a>
+
+
+<a class="link-btn" href="https://t.me/Ynareti" target="_blank">
+<i class="fa-brands fa-telegram"></i> Telegram
+</a>
+
+
+<button class="link-btn" onclick="openModal()">
+<i class="fa-solid fa-heart"></i> OnlyFans
+</button>
+</div>
+</div>
+
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<h2>Мой Telegram канал</h2>
+<p>Подписывайся 💜</p>
+<a href="https://t.me/dinka_tech" target="_blank">@dinka_tech</a>
+<button class="close" onclick="closeModal()">Закрыть</button>
+</div>
+</div>
+
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
